@@ -1,5 +1,5 @@
-import { UserConfig } from "vitepress";
-const config: UserConfig = {
+import { defineConfig } from "vitepress";
+export default defineConfig({
   // 是否允许切换dark模式（默认允许）
   appearance: true,
   // 语言
@@ -22,6 +22,10 @@ const config: UserConfig = {
       prev: "上一页",
       next: "下一页",
     },
+    // 是否展示最后更新
+    // lastUpdated: true,
+    // 打包输出目录
+    // outDir: "../build",
     // 社交链接
     socialLinks: [
       { icon: "github", link: "https://github.com/ShengXi2000" },
@@ -101,6 +105,4 @@ const config: UserConfig = {
     theme: "material-palenight",
     lineNumbers: true,
   },
-};
-
-export default config;
+});

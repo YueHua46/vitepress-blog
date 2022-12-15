@@ -25,6 +25,8 @@ features:
   - icon: 🎮
     title: 游戏
     details: 守望先锋2/全境封锁2/Genshin Impact/荒野大嫖客2
+lastUpdated: true
+outline: 2
 ---
 
 
