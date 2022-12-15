@@ -81,6 +81,15 @@ const config: UserConfig = {
           { text: "I-Algorithms", link: "/sidebar/other/i-algorithms" },
         ],
       },
+      {
+        text: "LINUX-UBUNTU",
+        items: [
+          {
+            text: "Ubuntu修改终端语言",
+            link: "/sidebar/linux-ubuntu/change-lang",
+          },
+        ],
+      },
     ],
     // 主页的页脚配置
     footer: {
