@@ -3,7 +3,8 @@
 ## 应用
 
 ### 安装
-> pnpm i
+> npm i
 
 ### 打包
-> pnpm run docs:build
+> npm run docs:build
+
