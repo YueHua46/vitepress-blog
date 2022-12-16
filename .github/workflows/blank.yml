@@ -14,7 +14,7 @@ jobs:
       # 切换分支获取源码
       - name: Checkout # step的名称，将会在 github action 的控制台中显示
         # 选择一个action，可以理解为若干 steps.run，有利于代码复用
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
       # 安装使用 node:16
       - name: use Node.js 16
         uses: actions/setup-node@v1
