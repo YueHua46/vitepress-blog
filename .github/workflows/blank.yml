@@ -29,17 +29,11 @@ jobs:
           CI: true
       # 部署到腾讯云服务器
       - name: Deploy to Server
-        uses: burnett01/rsync-deployments@master
+        uses: burnett01/rsync-deployments@5.2.1
         env:
             # 本地.ssh文件下的私钥id_rsa，存在secrets的TOKEN中
-            SSH_PRIVATE_KEY: ${{ secrets.TOKEN }} 
-            # 复制操作的参数。"-avzr --delete"意味部署时清空服务器目标目录下的文件
-            ARGS: "-avzr --delete" 
-            # 源目录，相对于$GITHUB_WORKSPACE根目录的路径
-            SOURCE: "website/" 
-            # 服务器域名
-            REMOTE_HOST: "43.139.15.62" 
-            # 腾讯云默认用户名为root
-            REMOTE_USER: "root" 
-            # 目标目录
-            TARGET: "/opt/web/website" 
+            remote_key: ${{ secrets.TOKEN }} 
+            path: website/
+            remote_path: /opt/web/website/
+            remote_host: 43.139.15.62
+            remote_user: root
