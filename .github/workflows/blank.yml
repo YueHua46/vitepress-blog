@@ -1,37 +1,45 @@
-# 这是帮助您开始使用 Actions 的基本工作流程
+# 一个workflow，名为deploy to tengxunyun
+name: deploy to tengxunyun
 
-# 工作流的名称（可随意填写）
-name: CI
+on: # 此CI/CD触发时的事件
+  push: # 在代码提交时自动触发
+    branches:
+      - main
 
-# 控制工作流如何运行
-on:
-  # 触发推送或拉取请求事件的工作流，但仅限于“主要”分支
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-  # 手动触发工作流（有就是允许手动触发）
-  workflow_dispatch:
-
-# 工作流的运行由一个或多个可以顺序或并行运行的作业组成
-jobs:
-  # 此工作流程包含一个名为“build”的作业
-  build:
-    # 作业将运行的运行器类型
-    runs-on: ubuntu-latest
-
-    # 步骤表示将作为作业的一部分执行的一系列任务
-    steps:
-      # 签出 $GITHUB_WORKSPACE 下的存储库，以便您的工作可以访问它
-      - uses: actions/checkout@v3
-
-      # 使用 runners shell 运行单个命令
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # 使用 runners shell 运行一组命令
-      - name: Run a multi-line script
+# 一个 CI/CD 的工作流有许多 jobs 组成，比如最典型的 job 是 lint，test，build。
+jobs: 
+  build: # 构建job
+    runs-on: ubuntu-latest # 跑workflow的服务器系统
+    steps: # job的一系列动作
+      # 切换分支获取源码
+      - name: Checkout # step的名称，将会在 github action 的控制台中显示
+        # 选择一个action，可以理解为若干 steps.run，有利于代码复用
+        uses: actions/checkout@master
+      # 安装使用 node:16
+      - name: use Node.js 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      # 运行命令，npm install && npm run build
+      - name: npm install and build
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          pnpm install
+          pnpm run docs:build
+        env:
+          CI: true
+      # 部署到腾讯云服务器
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@v2.0.7
+        env:
+            # 本地.ssh文件下的私钥id_rsa，存在secrets的TOKEN中
+            SSH_PRIVATE_KEY: ${{ secrets.TOKEN }} 
+            # 复制操作的参数。"-avzr --delete"意味部署时清空服务器目标目录下的文件
+            ARGS: "-avzr --delete" 
+            # 源目录，相对于$GITHUB_WORKSPACE根目录的路径
+            SOURCE: "website/" 
+            # 服务器域名
+            REMOTE_HOST: "43.139.15.62" 
+            # 腾讯云默认用户名为root
+            REMOTE_USER: "root" 
+            # 目标目录
+            TARGET: "/opt/web/website" 
