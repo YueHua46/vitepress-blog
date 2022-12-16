@@ -21,7 +21,7 @@ features:
     details: HTML5/CSS3/JavaScript/TypeScript/Vue/React
   - icon: 🖖
     title: 后端
-    details: Nodejs/Express/Nestjs/Mysql/Prisma
+    details: Nodejs/Express/Nestjs/Mysql/Prisma/Nginx
   - icon: 🎮
     title: 游戏
     details: 守望先锋2/全境封锁2/Genshin Impact/荒野大嫖客2

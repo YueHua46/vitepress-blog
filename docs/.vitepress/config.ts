@@ -17,6 +17,8 @@ export default defineConfig({
     outlineTitle: "索引",
     // 最后更新文本：
     lastUpdatedText: "Updated Date",
+    // 配置文件大纲的级别，2和3表示分别对应Markdown的##和###级别
+    outline: [2, 3],
     // 自定义文档页脚的上/下页文本内容
     docFooter: {
       prev: "上一页",
@@ -75,6 +77,7 @@ export default defineConfig({
           { text: "Express", link: "/sidebar/backend/express" },
           { text: "Mysql", link: "/sidebar/backend/mysql" },
           { text: "Prisma", link: "/sidebar/backend/prisma" },
+          { text: "Nginx", link: "/sidebar/backend/nginx" },
         ],
       },
       {
@@ -92,6 +95,10 @@ export default defineConfig({
             text: "Ubuntu修改终端语言",
             link: "/sidebar/linux-ubuntu/change-lang",
           },
+          {
+            text: "解决一段时间内ssh连接自动断开问题",
+            link: "/sidebar/linux-ubuntu/ssh-service",
+          },
         ],
       },
     ],
@@ -100,9 +107,10 @@ export default defineConfig({
       copyright: "Copyright © 2019-present fengji",
     },
   },
-  // 启用markdown的行号显示
+
   markdown: {
     theme: "material-palenight",
-    lineNumbers: true,
+    // 是否启用markdown的行号显示
+    lineNumbers: false,
   },
 });
