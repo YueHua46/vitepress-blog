@@ -135,7 +135,7 @@ http {
     ## 成功日志
     access_log /var/log/nginx/access.log;
 
-    ## 将其他配置分到其他conf文件以减少主conf的复杂度 
+    ## 将其他配置分到其他conf文件以减少主conf的复杂度
     include /etc/nginx/conf.d/http/*.conf;
 
     ## 请求头的配置
@@ -143,7 +143,7 @@ http {
     client_header_buffer_size 1k;
     ### 如果请求中header值过大，超过上述1k设定，则会应用下述buffer
     ### 如果请求header值也超过large，则直接返回400Error
-    large_client_header_buffers 21k;
+    large_client_header_buffers 2 21k;
 
     ## 请求体的配置
     ### 读取请求http中body的值，限制其buffer大小为16k，如超过其buffer大小，则会被写入临时文件
@@ -172,33 +172,16 @@ http {
     gzip_vary on;
     ### 禁用IE 6 gzip
     gzip_disable "MSIE [1-6]\.";
-    ### 设置压缩所需要的缓冲区大小     
+    ### 设置压缩所需要的缓冲区大小
     gzip_buffers 32 4k;
     ### 设置gzip压缩针对的HTTP协议版本，没做负载的可以不用
     ### gzip_http_version 1.0;
-    ### 开启缓存
-    location ~* ^.+\.(ico|gif|jpg|jpeg|png)$ { 
-        access_log   off; 
-        expires      2d;
-    }
-    location ~* ^.+\.(css|js|txt|xml|swf|wav)$ {
-        access_log   off;
-        expires      24h;
-    }
-    location ~* ^.+\.(html|htm)$ {
-        expires      1h;
-    }
-    location ~* ^.+\.(eot|ttf|otf|woff|svg)$ {
-        access_log   off;
-        expires max;
-    }
 
     ## 与客户端的长连接的配置
     ### 一个长连接最大的请求数量限制
     keepalive_requests 100000;
     ### 代表连接的空闲时间（单位s）
     keepalive_timeout 120;
-
 
     # server模块配置
     server {
@@ -207,15 +190,26 @@ http {
         listen 80;
         ### 请求域名
         server_name localhost;
-        
-        ## 引入server配置
-        include /etc/nginx/conf.d/server/*.conf
 
-        ### 匹配任意路由
-        location / {
-            root /opt/test;
-            index index.html;
+        ## 处理路由
+        location ~* ^.+\.(ico|gif|jpg|jpeg|png)$ {
+                access_log   off;
+                expires      2d;
         }
+        location ~* ^.+\.(css|js|txt|xml|swf|wav)$ {
+                access_log   off;
+                expires      24h;
+        }
+        location ~* ^.+\.(html|htm)$ {
+                expires      1h;
+        }
+        location ~* ^.+\.(eot|ttf|otf|woff|svg)$ {
+                access_log   off;
+                expires max;
+        }
+
+        ## 引入server配置
+        include /etc/nginx/conf.d/server/*.conf;
     }
 }
 

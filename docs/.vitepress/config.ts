@@ -7,7 +7,10 @@ export default defineConfig({
   // 应用标题
   title: "HOME",
   description: "VitePress 描述",
-
+  //   是否展示最后更新
+  lastUpdated: true,
+  // 打包输出目录
+  outDir: "../website",
   // 主页配置
   themeConfig: {
     siteTitle: "HOME",
@@ -24,10 +27,6 @@ export default defineConfig({
       prev: "上一页",
       next: "下一页",
     },
-    // 是否展示最后更新
-    // lastUpdated: true,
-    // 打包输出目录
-    // outDir: "../build",
     // 社交链接
     socialLinks: [
       { icon: "github", link: "https://github.com/ShengXi2000" },
