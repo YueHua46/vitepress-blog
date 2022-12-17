@@ -59,21 +59,81 @@ ps aux | percol
 当你通过交互式的grep筛选出结果后，并回车即可将结果输出到标准输出
 
 ## 查看服务器资源占用情况
-```
+```bash
 htop
 ```
 
 ## 查找文件夹或文件
 ### 在当前目录下查找一个文件夹或文件
-```
+```bash
 find . -iname 'something'
 ```
 ### 在所有路径下查找
 需要先安装：`sudo apt install locate`
-```
+```bash
 locate something
 ```
 没有效果可以敲一遍：`sudo updatedb`来更新索引
 ::: warning
 但注意到 updatedb 可能没有对最近新建的文件建立索引，所以你可能无法定位到这些未被索引的文件
 :::
+
+## 使用ag在源代码或数据文件中进行检索
+安装
+```bash
+sudo apt-get install silversearcher-ag
+```
+使用
+```bash
+ag content target
+```
+具体使用介绍：
+![An image](../../imgs/ubuntu-command01.png)
+
+## 使用rsync来远程同步文件或目录
+rsync 除了支持本地两个目录之间的同步，也支持远程同步，远程同步正是它的亮点所在
+它同时可以将本地内容，同步到远程服务器；也可将远程服务器内容，同步到本地
+安装
+```bash
+sudo apt-get install rsync
+```
+使用
+```bash
+rsync -avz --progress source/ username@remote_host:destination
+```
+::: tip
+`source`目录表示源目录，`destination`表示目标目录。
+:::
+也可以将远程内容同步到本地。
+```bash
+rsync -avz --progress username@remote_host:source/ destination
+```
+
+### Windows环境下使用rsync
+Windows环境安装rsync（前提有装scoop，scoop安装：https://scoop.sh）
+```powershell
+scoop install cwrsync
+```
+#### Example1：从远程服务器指定目录的所有内容同步到当前指定目录中
+::: tip
+注意三个点：
+1️⃣：以下的sundo是我的电脑用户名，把他改成你的用户名以确保他能够正确找到
+
+2️⃣：把cwrsync后目录的版本6.2.7改成你下的版本以确保指向正确
+
+3️⃣：把root后的ip地址改成你的以确保ip正确
+:::
+```powershell
+rsync -avz --progress -e 'C:/Users/sundo/scoop/apps/cwrsync/6.2.7/bin/ssh -p 22' root@xxx.xxx.xxx.xxx:/opt/web/website ./website
+```
+::: tip
+指定-e参数并且指向具体的ssh是为了避免windows有两个ssh.exe导致的问题，详细见：
+
+https://blog.csdn.net/xy707707/article/details/107560582
+:::
+
+#### Example2：从本地目录将指定内容同步到远程服务器指定目录中
+结果：将本地当前目录下的test目录中所有内容同步到远程服务器的/opt/test目录下
+```powershell
+rsync -avz --progress -e 'C:/Users/sundo/scoop/apps/cwrsync/6.2.7/bin/ssh -p 22' ./test/ root@XXX.XXX.XXX.XXX:/opt/test
+```
