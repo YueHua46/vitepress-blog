@@ -117,11 +117,12 @@ scoop install cwrsync
 #### Example1：从远程服务器指定目录的所有内容同步到当前指定目录中
 ::: warning
 注意三个点：
-1️⃣：以下的sundo是我的电脑用户名，把他改成你的用户名以确保他能够正确找到
 
-2️⃣：把cwrsync后目录的版本6.2.7改成你下的版本以确保指向正确
+1. 以下的sundo是我的电脑用户名，把他改成你的用户名以确保他能够正确找到
 
-3️⃣：把root后的ip地址改成你的以确保ip正确
+2. 把cwrsync后目录的版本6.2.7改成你下的版本以确保指向正确
+
+3. 把root后的ip地址改成你的以确保ip正确
 :::
 ```powershell
 rsync -avz --progress -e 'C:/Users/sundo/scoop/apps/cwrsync/6.2.7/bin/ssh -p 22' root@xxx.xxx.xxx.xxx:/opt/web/website ./website
