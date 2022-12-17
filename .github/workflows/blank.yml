@@ -35,6 +35,6 @@ jobs:
             switches: -avzr --delete
             path: website/
             remote_path: /opt/web/website/
-            remote_host: 43.139.15.62
-            remote_user: root
+            remote_host: ${{ secrets.HOST }} 
+            remote_user: ${{ secrets.USER }} 
             remote_key: ${{ secrets.TOKEN }} 
