@@ -23,7 +23,7 @@ export default defineConfig({
     // 内容页右边大纲的标题
     outlineTitle: "索引",
     // 最后更新文本：
-    lastUpdatedText: "Updated Date",
+    lastUpdatedText: "最后更新于",
     // 配置文件大纲的级别，2和3表示分别对应Markdown的##和###级别
     outline: [2, 3],
     // 自定义文档页脚的上/下页文本内容
