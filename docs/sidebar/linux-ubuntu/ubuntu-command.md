@@ -115,7 +115,7 @@ Windows环境安装rsync（前提有装scoop，scoop安装：https://scoop.sh）
 scoop install cwrsync
 ```
 #### Example1：从远程服务器指定目录的所有内容同步到当前指定目录中
-::: tip
+::: warning
 注意三个点：
 1️⃣：以下的sundo是我的电脑用户名，把他改成你的用户名以确保他能够正确找到
 
@@ -126,7 +126,7 @@ scoop install cwrsync
 ```powershell
 rsync -avz --progress -e 'C:/Users/sundo/scoop/apps/cwrsync/6.2.7/bin/ssh -p 22' root@xxx.xxx.xxx.xxx:/opt/web/website ./website
 ```
-::: tip
+::: warning
 指定-e参数并且指向具体的ssh是为了避免windows有两个ssh.exe导致的问题，详细见：
 
 https://blog.csdn.net/xy707707/article/details/107560582
