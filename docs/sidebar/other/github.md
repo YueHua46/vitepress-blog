@@ -95,3 +95,6 @@ vim ~/.ssh/authorized_keys
 
 ## 在本地通过git push来提交代码并让github action自动部署到云服务器
 如果完成了以上所有步骤，便可以将代码提交到repo，默认是会触发push事件，所以在提交后，actions便会运作
+![An image](../../imgs/github-actions04.png)
+如果配置成功，且没有出现任何问题，actions便会成功运行
+![An image](../../imgs/github-actions05.png)
