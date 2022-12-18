@@ -88,7 +88,7 @@ sudo apt-get install silversearcher-ag
 ag content target
 ```
 具体使用介绍：
-![An image](../../imgs/ubuntu-command01.png)
+![An image](../../../../imgs/ubuntu-command01.png)
 
 ## 使用rsync来远程同步文件或目录
 rsync 除了支持本地两个目录之间的同步，也支持远程同步，远程同步正是它的亮点所在

@@ -79,12 +79,12 @@ vim ~/.ssh/authorized_keys
 ### 3. 将私钥配置到repo的secrets中（secrets在settings栏）
 在本机上`cd ~/.ssh`，并复制目录下`id_ed25519`文件中所有内容（注意别漏掉尾部的换行）
 然后进入secrets中
-![An image](../../imgs/github-actions01.png)
+![An image](../../../../imgs/github-actions01.png)
 点击New repository secret新建secret，并将标题取为：`TOKEN`，将复制的私钥内容粘贴到文本框内（不要把尾部换行删了）
-![An image](../../imgs/github-actions02.png)
+![An image](../../../../imgs/github-actions02.png)
 
 ### 4. 继续配置secrets，配置HOST和USER（云服务器的公网IP和登陆用户）
-![An image](../../imgs/github-actions03.png)
+![An image](../../../../imgs/github-actions03.png)
 
 ## 回到刚刚第1步所创建的`blank.yml`配置文件
 其中有部分配置是要做修改的：
@@ -95,6 +95,6 @@ vim ~/.ssh/authorized_keys
 
 ## 在本地通过git push来提交代码并让github action自动部署到云服务器
 如果完成了以上所有步骤，便可以将代码提交到repo，默认是会触发push事件，所以在提交后，actions便会运作
-![An image](../../imgs/github-actions04.png)
+![An image](../../../../imgs/github-actions04.png)
 如果配置成功，且没有出现任何问题，actions便会成功运行
-![An image](../../imgs/github-actions05.png)
+![An image](../../../../imgs/github-actions05.png)

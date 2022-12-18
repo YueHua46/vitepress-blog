@@ -30,7 +30,7 @@ systemctl status nginx
 ```
 
 如果显示以下状态（有绿色状态显示），则表示服务成功启动
-![An image](../../imgs/nginx01.png)
+![An image](../../../../imgs/nginx01.png)
 
 
 ## 检查Nginx配置是否正确
@@ -40,7 +40,7 @@ nginx -t
 
 ## 访问公网IP查看Nginx是否挂载了静态页面
 Nginx成功挂载后显示界面
-![An image](../../imgs/nginx02.png)
+![An image](../../../../imgs/nginx02.png)
 
 ### 未成功部署
 ::: warning
@@ -88,7 +88,7 @@ nginx -s reload
 ## Nginx进程模型（概念）
 默认情况下，Nginx有2个Worker进程，均有Master主进程来控制，详细如下图
 
-![An image](../../imgs/nginx03.png)
+![An image](../../../../imgs/nginx03.png)
 
 所有主要的通信工作实际都是由Worker进程来控制
 
@@ -96,7 +96,7 @@ nginx -s reload
 Nginx配置文件，如果使用`ubuntu`发行版，且通过`apt install`方式安装，那么其配置文件路径
 在：`/etc/nginx/nginx.conf`
 Nginx配置文件的整体结构如下
-![An image](../../imgs/nginx04.png)
+![An image](../../../../imgs/nginx04.png)
 
 ### Nginx配置文件详解
 ```
@@ -258,4 +258,4 @@ server {
 - ` `默认匹配（不带任何字符）
 
 ### 优先级
-![An image](../../imgs/nginx05.webp)
+![An image](../../../../imgs/nginx05.webp)
