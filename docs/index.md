@@ -6,7 +6,7 @@ hero:
   text: 使用VitePress搭建的Blog
   tagline: 主要记录 前端/Nodejs后端/其他 等相关技术文档Blog
   image:
-    src: https://vitejs.dev/logo-with-shadow.png
+    src: imgs/keqing.png
     alt: VitePress
   actions:
     - theme: brand
