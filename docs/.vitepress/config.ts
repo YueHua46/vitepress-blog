@@ -13,6 +13,8 @@ import sidebarLinux from "../config/sidebarDocument/sidebarLinux";
 import sidebarOther from "../config/sidebarDocument/sidebarOther";
 
 export default defineConfig({
+  cleanUrls: "with-subfolders",
+  head: [["link", { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]],
   // 是否允许切换dark模式（默认允许）
   appearance: true,
   // 语言
