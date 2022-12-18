@@ -80,12 +80,12 @@ ps -ef | grep nginx
 kill -9 <pid>
 ```
 
-### Nginx配置重载（修改配置后敲一遍）
+## Nginx配置重载（修改nginx配置后敲一遍）
 ```
 nginx -s reload
 ```
 
-## Nginx进程模型
+## Nginx进程模型（概念）
 默认情况下，Nginx有2个Worker进程，均有Master主进程来控制，详细如下图
 
 ![An image](../../imgs/nginx03.png)
@@ -208,7 +208,7 @@ http {
                 expires max;
         }
 
-        ## 引入server配置
+        ## 引入外部server配置，降低当前配置文件复杂度
         include /etc/nginx/conf.d/server/*.conf;
     }
 }
@@ -229,34 +229,15 @@ cd /etc/nginx/conf.d && touch turing.conf
 写入以下配置来实现防盗链
 ```
 server {
-    # 监听80端口
-    listen 80;
-    # 服务名为本地
-    server_name localhost;
-
+    ...
     # 匹配任意路由下所有的图片静态资源
     # valid_referers后面的referer列表进行匹配，如果匹配到了就invalid_referer字段值为0 否则设置该值为1
     location ~ .*\.(gif|jpg|png|swf|flv|jpeg|bmp)$ {
         # 结尾是白名单
         valid_referers none blocked *.13sai.com;
         if ($invalid_referer) {
-            rewrite ^/ http://43.139.15.62:80;
+            rewrite ^/ http://XX.XX.XX.XX:80;
         }
-    }
-
-    # 匹配规则是/根目录
-    location / {
-        # 匹配成功，返回opt下test下的index.html
-        root /opt/test;
-        index index.html;
-    }
-
-    # 反向代理
-    location /app/ {
-        proxy_pass http://127.0.0.1:81;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-FOR $proxy_add_x_forwarded_for;
     }
 }
 ```
