@@ -14,15 +14,15 @@ title: 关于我
 ## 专业
 计算机科学与技术
 
-## 技术栈
+## 技术栈（不分熟练度）
 | 前端           |     后端      |  其他   |
 | :-----------: | :-----------: | :----: |
 | HTML          |   Nodejs      |  Git   |
-| CSS           |   Express     |  Linux基本      |
-| JavaScript    |   Nestjs      |        |
-| TypeScript    |   Mysql       |        |
+| CSS           |   Express     |  Linux      |
+| JavaScript    |   Nestjs      |  Github      |
+| TypeScript    |   Mysql       |  Github Actions      |
 | HTTP          |   Prisma      |        |
-| Vue           |               |        |
+| Vue           |   Nginx       |        |
 | React         |               |        |
 
 ## 后期学习计划

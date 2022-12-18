@@ -40,7 +40,7 @@ export default [
   },
   {
     text: "关于我",
-    link: "/sidebar/about/home",
+    link: "/sidebar/about/me",
     activeMatch: "/sidebar/about/",
   },
 ];
