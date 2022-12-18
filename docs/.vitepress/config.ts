@@ -15,7 +15,14 @@ import sidebarOther from "../config/sidebarDocument/sidebarOther";
 export default defineConfig({
   cleanUrls: "with-subfolders",
   head: [
-    ["link", { rel: "icon", type: "image/x-icon", href: "../favicon.ico" }],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "https://resource-1314318362.cos.ap-shanghai.myqcloud.com/imgs/favicon.ico",
+      },
+    ],
   ],
   // 是否允许切换dark模式（默认允许）
   appearance: true,
