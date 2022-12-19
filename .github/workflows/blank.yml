@@ -12,15 +12,6 @@ jobs:
     runs-on: ubuntu-latest # 跑workflow的服务器系统
     steps: # job的一系列动作
       - uses: actions/checkout@v3
-      - name: Get the content of algolia.json as config
-        id: algolia_config
-        run: echo "config=$(cat crawlerConfig.json | jq -r tostring)" >> $GITHUB_OUTPUT
-      - name: Push indices to Algolia
-        uses: signcl/docsearch-scraper-action@master
-        env:
-          APPLICATION_ID: ${{ secrets.APPLICATION_ID }}
-          API_KEY: ${{ secrets.API_KEY }}
-          CONFIG: ${{ steps.algolia_config.outputs.config }}
       - name: use Node.js 16
         uses: actions/setup-node@master
         with:
@@ -45,12 +36,20 @@ jobs:
             remote_key: ${{ secrets.TOKEN }} 
   edit-readme: 
     runs-on: ubuntu-latest
-    needs: build
     steps:
     - uses: actions/checkout@v3
       with:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+    - name: Get the content of algolia.json as config
+        id: algolia_config
+        run: echo "config=$(cat crawlerConfig.json | jq -r tostring)" >> $GITHUB_OUTPUT
+    - name: Push indices to Algolia
+      uses: signcl/docsearch-scraper-action@master
+      env:
+        APPLICATION_ID: ${{ secrets.APPLICATION_ID }}
+        API_KEY: ${{ secrets.API_KEY }}
+        CONFIG: ${{ steps.algolia_config.outputs.config }}
     # 用于生成项目结构svg的step
     - name: 用于生成项目结构图
       uses: githubocto/repo-visualizer@0.8.2
