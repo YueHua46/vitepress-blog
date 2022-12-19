@@ -38,6 +38,10 @@ export default defineConfig({
   outDir: "../website",
   // 主页配置
   themeConfig: {
+    // 侧边栏的自定义content
+    recommend: {
+      img: "https://resource-1314318362.cos.ap-shanghai.myqcloud.com/imgs/venti01.png",
+    },
     // search
     algolia: {
       appId: "S6GKVSL2B7", // 需要替换
