@@ -18,7 +18,7 @@ jobs:
         run: echo "config=$(cat crawlerConfig.json | jq -r tostring)" >> $GITHUB_OUTPUT
               # 用于生成项目结构svg的job
       - name: 用于生成项目结构图
-        uses: githubocto/repo-visualizer@main
+        uses: githubocto/repo-visualizer@0.8.2
         with:
           excluded_paths: "dist,node_modules"
           branch: main
