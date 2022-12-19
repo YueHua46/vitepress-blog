@@ -39,6 +39,9 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@master
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0
     - name: Get the content of algolia.json as config
       id: algolia_config
       run: echo "config=$(cat crawlerConfig.json | jq -r tostring)" >> $GITHUB_OUTPUT
@@ -67,5 +70,5 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.TOKEN }}
-        branch: main
+        branch: ${{ github.ref }}
 
