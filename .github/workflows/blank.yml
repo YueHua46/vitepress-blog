@@ -63,10 +63,4 @@ jobs:
         git config --local user.name "github-actions[bot]"
     - name: 提交更改到远程仓库
       run: |
-        git branch newbranch
-        git branch
-        git checkout newbranch
-        git add .
-        git commit -a -m "[update]：更新项目结构图"
-        git checkout master 
-        git push -u origin main
+        git push
