@@ -48,7 +48,7 @@ export default defineConfig({
     },
     siteTitle: "YueHua",
     // 主页logo
-    logo: "https://vitejs.dev/logo-with-shadow.png",
+    logo: "https://resource-1314318362.cos.ap-shanghai.myqcloud.com/imgs/favicon.ico",
     // 内容页右边大纲的标题
     outlineTitle: "索引",
     // 最后更新文本：
