@@ -8,5 +8,4 @@
 ### 打包
 > npm run build
 
-### 项目结构图
-[!diagram](./diagram.svg)
+
