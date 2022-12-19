@@ -10,6 +10,7 @@ on: # 此CI/CD触发时的事件
 jobs: 
   build: # 构建job
     runs-on: ubuntu-latest # 跑workflow的服务器系统
+    concurrency: staging_environment
     steps: # job的一系列动作
       - uses: actions/checkout@v3
       - name: Get the content of algolia.json as config
@@ -18,12 +19,10 @@ jobs:
               # 用于生成项目结构svg的job
       - name: 用于生成项目结构图
         uses: githubocto/repo-visualizer@0.8.2
-        concurrency: staging_environment
         with:
           excluded_paths: "dist,node_modules"
           branch: main
       - name: 用于将项目结构图svg追加到readme中
-        concurrency: staging_environment
         run: echo "### 项目结构图 [!project svg](./diagram.svg)" >> README.md
       - name: Push indices to Algolia
         uses: signcl/docsearch-scraper-action@master
