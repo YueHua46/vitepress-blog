@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: Fengji Blog
+  name: Yuehua Blog
   text: 使用VitePress搭建的Blog
   tagline: 主要记录 前端/Nodejs后端/其他 等相关技术文档Blog
   image:
@@ -31,10 +31,36 @@ outline: 2
 
 
 <style>
+  /* 
+    background #C147E9
+    border #DA6DFF
+    color #ffffff
+  */
 :root {
+  /* 主页配色 */
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
-  --vp-home-hero-image-background-image: linear-gradient( -45deg, #bd34fe 50%, #47caff 50% );
-  --vp-home-hero-image-filter: blur(60px);
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #C147E9, #DA6DFF);
+  --vp-home-hero-image-background-image: linear-gradient( -45deg, #9b59b6 50%, #9b59b6 50% );
+  --vp-home-hero-image-filter: blur(80px);
+
+  /* 主页按钮配色 */
+  --vp-button-brand-bg:#C147E9;
+  --vp-button-brand-border:#DA6DFF;
+  --vp-button-brand-hover-bg:#AF25DC;
+  --vp-button-brand-hover-border:#DA6DFF;
+  --vp-button-brand-active-border:#DA6DFF;
+
+  /* 网站主题配色 */
+  /* 网站文本颜色 */
+  --vp-c-brand:#DA6DFF;
+  --vp-c-brand-dark:#DA6DFF;
+  --vp-c-brand-light:#DA6DFF;
+  /* 网站文本颜色 */
+  --vp-v-text-2:#DA6DFF;
+
+}
+/* 主页右边列表active颜色 */
+a.outline-link.active {
+  color:#DA6DFF !important;
 }
 </style>
