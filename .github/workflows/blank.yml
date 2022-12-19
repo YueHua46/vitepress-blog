@@ -68,6 +68,5 @@ jobs:
     - name: 提交更改到远程仓库
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.TOKEN }}
         branch: main
 
