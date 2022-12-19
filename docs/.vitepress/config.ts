@@ -13,7 +13,8 @@ import sidebarLinux from "../config/sidebarDocument/sidebarLinux";
 import sidebarOther from "../config/sidebarDocument/sidebarOther";
 
 export default defineConfig({
-  cleanUrls: "with-subfolders",
+  base: "/",
+  // cleanUrls: "with-subfolders",
   head: [
     [
       "link",
