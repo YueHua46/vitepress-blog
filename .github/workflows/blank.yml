@@ -56,5 +56,5 @@ jobs:
       - name: 将项目结构图push到readme
         run: |
           echo "### 项目结构图" >> ./README.md
-          echo [!diagram](./diagram.svg) >> ./README.md
+          echo "[!diagram](./diagram.svg)" >> ./README.md
 
