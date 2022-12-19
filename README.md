@@ -1,4 +1,4 @@
-# 这是使用VitePress创建的个人博客
+# Yuehua Blog
 
 ## 预览
 `http://yuehua.xyz`
@@ -13,7 +13,4 @@ npm i
 npm run build
 ```
 
-
-
 ### 项目结构图
-![diagram](./diagram.svg)

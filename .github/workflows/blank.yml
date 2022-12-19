@@ -56,8 +56,7 @@ jobs:
         branch: main
     - name: 将项目结构图push到readme
       run: |
-          echo "### 项目结构图" >> ./README.md
-          echo "![diagram](./diagram.svg)" >> ./README.md
+          sed -i '17s/.*/![diagram](./diagram.svg)/' ./README.md
     - name: Commit files
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
