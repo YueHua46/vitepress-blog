@@ -21,6 +21,12 @@ jobs:
           APPLICATION_ID: ${{ secrets.APPLICATION_ID }}
           API_KEY: ${{ secrets.API_KEY }}
           CONFIG: ${{ steps.algolia_config.outputs.config }}
+        # 用于生成项目结构svg的job
+      - name: Repo Visualizer
+        uses: githubocto/repo-visualizer@0.8.2
+        with:
+          excluded_paths: "dist,node_modules"
+          branch: main
       - name: use Node.js 16
         uses: actions/setup-node@master
         with:
