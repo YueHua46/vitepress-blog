@@ -38,25 +38,25 @@ outline: 2
   */
 :root {
   /* 主页配色 */
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #C147E9, #DA6DFF);
-  --vp-home-hero-image-background-image: linear-gradient( -45deg, #9b59b6 50%, #9b59b6 50% );
-  --vp-home-hero-image-filter: blur(80px);
+  --vp-home-hero-name-color: transparent !important;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #C147E9, #DA6DFF)!important;
+  --vp-home-hero-image-background-image: linear-gradient( -45deg, #9b59b6 50%, #9b59b6 50% )!important;
+  --vp-home-hero-image-filter: blur(80px)!important;
 
   /* 主页按钮配色 */
-  --vp-button-brand-bg:#C147E9;
-  --vp-button-brand-border:#DA6DFF;
+  --vp-button-brand-bg:#C147E9 !important;
+  --vp-button-brand-border:#DA6DFF !important;
   --vp-button-brand-hover-bg:#AF25DC;
-  --vp-button-brand-hover-border:#DA6DFF;
-  --vp-button-brand-active-border:#DA6DFF;
+  --vp-button-brand-hover-border:#DA6DFF !important;
+  --vp-button-brand-active-border:#DA6DFF !important;
 
   /* 网站主题配色 */
   /* 网站文本颜色 */
-  --vp-c-brand:#DA6DFF;
-  --vp-c-brand-dark:#DA6DFF;
-  --vp-c-brand-light:#DA6DFF;
+  --vp-c-brand:#DA6DFF !important;
+  --vp-c-brand-dark:#DA6DFF !important;
+  --vp-c-brand-light:#DA6DFF !important;
   /* 网站文本颜色 */
-  --vp-v-text-2:#DA6DFF;
+  --vp-v-text-2:#DA6DFF !important;
 
 }
 /* 主页右边列表active颜色 */

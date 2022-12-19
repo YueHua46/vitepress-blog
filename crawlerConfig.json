@@ -1,6 +1,6 @@
 {
   "index_name": "yuehua",
-  "start_urls": ["http://43.139.15.62/"],
+  "start_urls": ["http://43.139.15.62"],
   "rateLimit": 8,
   "maxDepth": 10,
   "selectors": {
