@@ -57,7 +57,7 @@ jobs:
     - name: 将项目结构图push到readme
       run: |
           echo "### 项目结构图" >> ./README.md
-          echo "[!diagram](./diagram.svg)" >> ./README.md
+          echo "![diagram](./diagram.svg)" >> ./README.md
     - name: Commit files
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -66,8 +66,3 @@ jobs:
     - name: 提交更改到远程仓库
       run: |
         git push
-      # uses: ad-m/github-push-action@master
-      # with:
-      #   github_token: ${{ secrets.TOKEN }}
-      #   branch: ${{ github.ref }}
-
