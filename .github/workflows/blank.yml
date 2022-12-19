@@ -27,6 +27,9 @@ jobs:
         with:
           excluded_paths: "dist,node_modules"
           branch: main
+      - name: 用于将项目结构图svg追加到readme中
+        run: echo "### 项目结构图
+[!project svg](./diagram.svg)" >> README.md
       - name: use Node.js 16
         uses: actions/setup-node@master
         with:
