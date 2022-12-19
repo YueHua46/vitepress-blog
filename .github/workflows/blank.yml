@@ -11,11 +11,16 @@ jobs:
   build: # 构建job
     runs-on: ubuntu-latest # 跑workflow的服务器系统
     steps: # job的一系列动作
-      # 切换分支获取源码
-      - name: Checkout # step的名称，将会在 github action 的控制台中显示
-        # 选择一个action，可以理解为若干 steps.run，有利于代码复用
-        uses: actions/checkout@v3
-      # 安装使用 node:16
+      - uses: actions/checkout@v2
+      - name: Get the content of algolia.json as config
+        id: algolia_config
+        run: echo "config=$(cat crawlerConfig.json | jq -r tostring)" >> $GITHUB_OUTPUT
+      - name: Push indices to Algolia
+        uses: signcl/docsearch-scraper-action@master
+        env:
+          APPLICATION_ID: ${{ secrets.APPLICATION_ID }}
+          API_KEY: ${{ secrets.API_KEY }}
+          CONFIG: ${{ steps.algolia_config.outputs.config }}
       - name: use Node.js 16
         uses: actions/setup-node@master
         with:

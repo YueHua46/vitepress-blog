@@ -29,14 +29,22 @@ export default defineConfig({
   // 语言
   lang: "zh-CN",
   // 应用标题
-  title: "HOME",
-  description: "VitePress 描述",
+  title: "YueHua",
+  description: "Yuehua Blog",
   //   是否展示最后更新
   lastUpdated: true,
   // 打包输出目录
   outDir: "../website",
   // 主页配置
   themeConfig: {
+    // search
+    algolia: {
+      appId: "RDDxxx", // 需要替换
+      apiKey: "73ef51e5a88847268064f0ea81087ecd", // 需要替换
+      indexName: "yuehua", // 需要替换
+      placeholder: "请输入关键词",
+      buttonText: "搜索",
+    },
     siteTitle: "HOME",
     // 主页logo
     logo: "https://vitejs.dev/logo-with-shadow.png",

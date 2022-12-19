@@ -1,31 +1,28 @@
 export default [
   {
-    text: "文档库",
+    text: "📓文档库",
+    activeMatch: "/sidebar/document/",
     items: [
       {
         text: "前端",
         link: "/sidebar/document/frontend/html-css-js/html",
-        activeMatch: "/sidebar/document/frontend/",
       },
       {
         text: "后端",
         link: "/sidebar/document/backend/nodejs/test1",
-        activeMatch: "/sidebar/document/backend/",
       },
       {
         text: "其他",
         link: "/sidebar/document/other/git-github/github",
-        activeMatch: "/sidebar/document/other/",
       },
       {
         text: "Linux",
         link: "/sidebar/document/linux/ubuntu-command",
-        activeMatch: "/sidebar/document/linux/",
       },
     ],
   },
   {
-    text: "工具库",
+    text: "⚙️ 工具库",
     activeMatch: "/sidebar/tools/",
     items: [
       {
@@ -39,7 +36,7 @@ export default [
     ],
   },
   {
-    text: "关于我",
+    text: "🥰 关于我",
     link: "/sidebar/about/me",
     activeMatch: "/sidebar/about/",
   },
