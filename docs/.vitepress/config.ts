@@ -46,7 +46,7 @@ export default defineConfig({
       placeholder: "请输入关键词",
       buttonText: "搜索",
     },
-    siteTitle: "HOME",
+    siteTitle: "YueHua",
     // 主页logo
     logo: "https://vitejs.dev/logo-with-shadow.png",
     // 内容页右边大纲的标题
@@ -75,7 +75,7 @@ export default defineConfig({
     },
     // 主页的页脚配置
     footer: {
-      copyright: "Copyright © 2019-present fengji",
+      copyright: "Copyright © 2022-present yuehua",
     },
   },
 
