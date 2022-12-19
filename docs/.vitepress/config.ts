@@ -39,7 +39,7 @@ export default defineConfig({
   themeConfig: {
     // search
     algolia: {
-      appId: "RDDxxx", // 需要替换
+      appId: "S6GKVSL2B7", // 需要替换
       apiKey: "73ef51e5a88847268064f0ea81087ecd", // 需要替换
       indexName: "yuehua", // 需要替换
       placeholder: "请输入关键词",
