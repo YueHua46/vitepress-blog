@@ -58,4 +58,6 @@ jobs:
         run: |
           echo "### 项目结构图" >> ./README.md
           echo "[!diagram](./diagram.svg)" >> ./README.md
+          ls
+          cat ./README.md
 
