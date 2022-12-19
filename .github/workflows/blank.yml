@@ -53,6 +53,7 @@ jobs:
     runs-on: ubuntu-latest # 跑workflow的服务器系统
     needs: build
     steps: 
+      - uses: actions/checkout@v3
       - name: 将项目结构图push到readme
         run: |
           echo "### 项目结构图" >> ./README.md
