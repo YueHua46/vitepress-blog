@@ -18,12 +18,12 @@ jobs:
         run: echo "config=$(cat crawlerConfig.json | jq -r tostring)" >> $GITHUB_OUTPUT
               # 用于生成项目结构svg的job
       - name: 用于生成项目结构图
-        uses: githubocto/repo-visualizer@0.8.2
+        uses: githubocto/repo-visualizer@main
         with:
           excluded_paths: "dist,node_modules"
           branch: main
-      - name: 用于将项目结构图svg追加到readme中
-        run: echo "### 项目结构图 [!project svg](./diagram.svg)" >> README.md
+      # - name: 用于将项目结构图svg追加到readme中
+      #   run: echo "### 项目结构图 [!project svg](./diagram.svg)" >> README.md
       - name: Push indices to Algolia
         uses: signcl/docsearch-scraper-action@master
         env:
