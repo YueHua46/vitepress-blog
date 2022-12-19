@@ -6,7 +6,7 @@
 > npm i
 
 ### 打包
-> npm run docs:build
+> npm run build
 
 
 
