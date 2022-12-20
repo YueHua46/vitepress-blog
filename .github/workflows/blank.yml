@@ -34,6 +34,14 @@ jobs:
             remote_host: ${{ secrets.HOST }} 
             remote_user: ${{ secrets.USER }} 
             remote_key: ${{ secrets.TOKEN }} 
+      - name: Deploy GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with: 
+          target_branch: master
+          build_dir: website
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
   edit-readme: 
     runs-on: ubuntu-latest
     steps:
