@@ -5,7 +5,7 @@ export default [
     items: [
       {
         text: "工具1",
-        link: "/sidebar/tools/tools-type1/index",
+        link: "/sidebar/tools/tools-type1/test1",
       },
     ],
   },
@@ -15,7 +15,7 @@ export default [
     items: [
       {
         text: "工具1",
-        link: "/sidebar/tools/tools-type2/index",
+        link: "/sidebar/tools/tools-type2/test1",
       },
     ],
   },
