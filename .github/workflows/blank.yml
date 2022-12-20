@@ -34,21 +34,10 @@ jobs:
             remote_host: ${{ secrets.HOST }} 
             remote_user: ${{ secrets.USER }} 
             remote_key: ${{ secrets.TOKEN }} 
-  build2page: 
-    runs-on: ubuntu-latest # 跑workflow的服务器系统
-    steps: # job的一系列动作
-      - uses: actions/checkout@v3
-      - name: use Node.js 16
-        uses: actions/setup-node@master
-        with:
-          node-version: 16
-      # 运行命令，npm install && npm run build
-      - name: npm install and build
+      # 部署的github page
+      - name: show project
         run: |
-          npm install
-          npm run build
-        env:
-          CI: true
+          ls
       - name: Deploy GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v3.1.0
