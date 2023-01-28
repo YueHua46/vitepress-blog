@@ -40,7 +40,7 @@ export default defineConfig({
   themeConfig: {
     // 侧边栏的自定义content
     recommend: {
-      img: "/imgs/venti01.png",
+      img: "https://mystickermania.com/cdn/stickers/genshin-impact/genshin-venti-idea-512x512.png",
     },
     // search
     algolia: {
