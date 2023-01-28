@@ -6,7 +6,7 @@ hero:
   text: 使用VitePress搭建的Blog
   tagline: 主要记录 前端/Nodejs后端/其他 等相关技术文档Blog
   image:
-    src: https://resource-1314318362.cos.ap-shanghai.myqcloud.com/imgs/keqing.png
+    src: https://s1.ax1x.com/2023/01/28/pSa9BDO.png
     alt: VitePress
   actions:
     - theme: brand
@@ -18,7 +18,7 @@ hero:
 features:
   - icon: ⚡
     title: 前端
-    details: HTML5/CSS3/JavaScript/TypeScript/Vue/React
+    details: HTML5/CSS3/JavaScript/TypeScript/Vue/React/Nuxt3
   - icon: 🖖
     title: 后端
     details: Nodejs/Express/Nestjs/Mysql/Prisma/Nginx

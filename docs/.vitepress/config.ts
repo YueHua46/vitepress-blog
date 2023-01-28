@@ -40,7 +40,7 @@ export default defineConfig({
   themeConfig: {
     // 侧边栏的自定义content
     recommend: {
-      img: "https://resource-1314318362.cos.ap-shanghai.myqcloud.com/imgs/venti01.png",
+      img: "/imgs/venti01.png",
     },
     // search
     algolia: {
