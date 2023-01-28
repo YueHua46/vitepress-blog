@@ -40,12 +40,12 @@ export default [
     ],
   },
   {
-    text: "Other",
+    text: "SSR框架",
     collapsible: true,
     items: [
       {
-        text: "其他",
-        link: "/sidebar/document/frontend/other/other",
+        text: "Nuxt3",
+        link: "/sidebar/document/frontend/other/nuxt3",
       },
     ],
   },
