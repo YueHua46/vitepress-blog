@@ -14,7 +14,7 @@ npm i
 ```
 npm run build
 ```
-
+![diagram](./diagram.svg)
 ## 项目结构图
 ![diagram](./diagram.svg)
 
