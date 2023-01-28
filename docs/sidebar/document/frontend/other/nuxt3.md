@@ -2,9 +2,9 @@
 
 ## 安装并进入目录
 
-> npx nuxi init <project-name>
+> npx nuxi init project-name
 >
-> cd <project-name>
+> cd project-name
 >
 > yarn
 >
