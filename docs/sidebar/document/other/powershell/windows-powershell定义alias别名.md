@@ -8,11 +8,12 @@
 
 ### 修改指定别名
 
-> set-alias <alias-name> <command>
+> set-alias aliasName command
 
 ### 新建指定别名
 
-> new-alias <alias-name> <command>
+> new-alias aliasName command
+
 
 例新建一个pnpm别名：
 
@@ -22,7 +23,7 @@ new-alias p pnpm
 
 ### 删除指定别名
 
-> remove-item alias:<alias-name>
+> remove-item alias:aliasName
 
 ## 永久别名
 
