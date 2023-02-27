@@ -23,4 +23,14 @@ export default [
       },
     ],
   },
+  {
+    text: "powershell",
+    collapsible: true,
+    items: [
+      {
+        text: "powershell alias别名定义方式",
+        link: "/sidebar/document/other/powershell/windows-powershell定义alias别名",
+      },
+    ],
+  },
 ];
