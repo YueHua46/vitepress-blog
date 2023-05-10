@@ -4,8 +4,8 @@ export default [
     collapsible: true,
     items: [
       {
-        text: "测试文章1",
-        link: "/sidebar/document/backend/nodejs/test1",
+        text: "发布npm包（造轮子）流程",
+        link: "/sidebar/document/backend/nodejs/发布npm包（造轮子）流程",
       },
     ],
   },
@@ -14,8 +14,8 @@ export default [
     collapsible: true,
     items: [
       {
-        text: "测试文章1",
-        link: "/sidebar/document/backend/express/test1",
+        text: "middlewares中间件是什么",
+        link: "/sidebar/document/backend/express/middlewares",
       },
     ],
   },

@@ -4,9 +4,38 @@ export default [
     collapsible: true,
     items: [
       {
-        text: "test",
-        link: "/sidebar/document/frontend/html-css-js/html",
+        text: "shadowDOM与自定义元素结合应用",
+        link: "/sidebar/document/frontend/html-css-js/shadowDOM_customHTML",
       },
+      {
+        text: "script作用域",
+        link: "/sidebar/document/frontend/html-css-js/script作用域",
+      },
+      {
+        text: "图片懒加载原生js实现",
+        link: "/sidebar/document/frontend/html-css-js/图片懒加载原生js实现",
+      },
+      {
+        text: "WebWorker初探",
+        link: "/sidebar/document/frontend/html-css-js/WebWorker初探",
+      },
+      {
+        text: "JS面试题",
+        link: "/sidebar/document/frontend/html-css-js/JS面试题",
+      },
+      {
+        text: "ES6_Set和WeakSet",
+        link: "/sidebar/document/frontend/html-css-js/ES6_Set和WeakSet",
+      },
+      {
+        text: "ES6_Map和WeakMap",
+        link: "/sidebar/document/frontend/html-css-js/ES6_Map和WeakMap",
+      },
+      {
+        text: "WebSocket初探",
+        link: "/sidebar/document/frontend/html-css-js/WebSocket初探",
+      },
+
     ],
   },
   {
@@ -14,8 +43,12 @@ export default [
     collapsible: true,
     items: [
       {
-        text: "vue",
-        link: "/sidebar/document/frontend/vue-react/vue",
+        text: "React-Router创建过程",
+        link: "/sidebar/document/frontend/vue-react/React-Router创建过程",
+      },
+      {
+        text: "React-Redux创建过程",
+        link: "/sidebar/document/frontend/vue-react/React-Redux创建过程",
       },
     ],
   },
@@ -24,8 +57,8 @@ export default [
     collapsible: true,
     items: [
       {
-        text: "typescript",
-        link: "/sidebar/document/frontend/typescript/typescript",
+        text: "解决TypeScript命名冲突的2种方式",
+        link: "/sidebar/document/frontend/typescript/解决TypeScript命名冲突的2种方式",
       },
     ],
   },
@@ -34,8 +67,8 @@ export default [
     collapsible: true,
     items: [
       {
-        text: "module-build",
-        link: "/sidebar/document/frontend/module-build/module",
+        text: "Vite+TypeScript配置路径",
+        link: "/sidebar/document/frontend/module-build/Vite+TypeScript配置路径",
       },
     ],
   },
@@ -50,7 +83,15 @@ export default [
       {
         text: "taro自定义tabbar方式",
         link: "/sidebar/document/frontend/other/taro自定义tabbar方式"
-      }
+      },
+      {
+        text: "package文件属性的相关说明",
+        link: "/sidebar/document/frontend/other/package文件属性的相关说明"
+      },
+      {
+        text: "git常用命令",
+        link: "/sidebar/document/frontend/other/git常用命令"
+      },
     ],
   },
 ];
