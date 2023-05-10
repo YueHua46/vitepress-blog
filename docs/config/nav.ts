@@ -5,11 +5,11 @@ export default [
     items: [
       {
         text: "前端",
-        link: "/sidebar/document/frontend/html-css-js/html",
+        link: "/sidebar/document/frontend/html-css-js/shadowDOM_customHTML",
       },
       {
         text: "后端",
-        link: "/sidebar/document/backend/nodejs/test1",
+        link: "/sidebar/document/backend/nginx/nginx",
       },
       {
         text: "其他",

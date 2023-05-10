@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /sidebar/document/frontend/html-css-js/html
+      link: /sidebar/document/frontend/html-css-js/shadowDOM_customHTML
     - theme: alt
       text: View on GitHub
       link: https://github.com/ShengXi2000
