@@ -18,13 +18,13 @@ hero:
 features:
   - icon: ⚡
     title: 前端
-    details: HTML5/CSS3/JavaScript/TypeScript/Vue/React/Nuxt3
+    details: TypeScript/Vue/React/Nuxt3/ChromeExtensions
   - icon: 🖖
     title: 后端
-    details: Nodejs/Express/Nestjs/Mysql/Prisma/Nginx
+    details: Nodejs/Express/koa2/Nestjs/Mysql/Prisma/Nginx
   - icon: 🎮
     title: 游戏
-    details: 守望先锋2/全境封锁2/Genshin Impact/荒野大嫖客2
+    details: 守望先锋/星穹铁道/GTAV OL/部落冲突
 lastUpdated: true
 outline: 2
 ---

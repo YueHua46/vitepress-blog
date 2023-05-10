@@ -31,6 +31,14 @@ export default [
         text: "powershell alias别名定义方式",
         link: "/sidebar/document/other/powershell/windows-powershell定义alias别名",
       },
+      {
+        text: "powershell基本命令",
+        link: "/sidebar/document/other/powershell/powershell基本命令",
+      },
+      {
+        text: "powershell参数说明",
+        link: "/sidebar/document/other/powershell/powershell参数说明",
+      },
     ],
   },
 ];

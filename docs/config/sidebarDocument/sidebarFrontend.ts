@@ -40,13 +40,17 @@ export default [
     ],
   },
   {
-    text: "SSR框架",
+    text: "其他",
     collapsible: true,
     items: [
       {
-        text: "Nuxt3",
+        text: "Nuxt3初试笔记",
         link: "/sidebar/document/frontend/other/nuxt3",
       },
+      {
+        text: "taro自定义tabbar方式",
+        link: "/sidebar/document/frontend/other/taro自定义tabbar方式"
+      }
     ],
   },
 ];
