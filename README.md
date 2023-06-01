@@ -3,7 +3,7 @@
 ## 预览
 `http://yuehua.xyz`
 or
-`https://shengxi2000.github.io/`
+`https://yuehua46.github.io/`
 
 ## 安装
 ```
